@@ -7,27 +7,37 @@
   padding: 10px;
 
 }
+.bannerbestsale2{
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ccc;
+  border-radius: 10px;
+  text-align: center;
+  height: 50px;
 
+}
 .bannercategory {
   display: flex;
   gap: 10px;
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   width: 100%; 
   box-sizing: border-box;
   overflow-x: auto; 
-  white-space: nowrap; 
+  // white-space: nowrap; 
 }
 
 .banner-item {
-  display: inline-flex; 
-  gap: 10px;
+  // display: inline-flex; 
+  // gap: 10px;
   background-color: #ccc;
   padding: 20px;
   text-align: center;
-  flex: 0 0 auto;  
+  flex: 1 1 calc(20% - 20px);
   border-radius: 5px;
-  min-width: 200px; 
+  min-width: 150px;
+  max-width: 250px; 
 }
 
 .large-banner {
@@ -57,7 +67,17 @@
   justify-content: center;
   font-size: 14px;
 }
+@media(min-with:1024px){
+  .bannercategory{
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .banner-item{
+    flex: 1;
+    min-width: 0;
+  }
 
+}
  
 @media (max-width: 768px) {
   .bannerheader {
@@ -66,12 +86,12 @@
     padding: 10px;
   }
   .bannercategory{
-    overflow-x: visible;
-    white-space: normal;
+    flex-wrap: wrap;
+    gap: 20px;
 
   }
   .banner-item{
-    flex: 1;
+    flex: 1 1 calc(33.333% - 20px);
     min-width: 0;
   }
 
@@ -96,6 +116,7 @@
   }
 }
  
+
 @media (max-width: 480px) {
   .large-banner {
     height: 100px;  
@@ -106,5 +127,8 @@
     width: 100%;  
     height: 50px;  
     font-size: 10px;
+  }
+  .banner-item{
+    min-width: 150px;
   }
 }
