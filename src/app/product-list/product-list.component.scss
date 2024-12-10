@@ -1,101 +1,168 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css";
+
 .cardproductsale {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(212, 209, 209);
   border-radius: 10px;
   margin: 20px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
 }
 
 .banproductsale {
   background-color: rgb(64, 64, 64);
   color: white;
   text-align: center;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  padding: 15px 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ปรับ grid อัตโนมัติ */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 15px;
 }
 
 .product-item {
-  background-color: white;
+  background-color: rgb(165, 162, 162);
   border-radius: 10px;
   border-top-left-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px;
   position: relative;
+  height: 250px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
+
 
 .discount-badge {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: rgb(255, 77, 77);
-  color: white;
-  padding: 5px 10px;
-  font-size: 14px;
-  border-bottom-right-radius: 20px;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(255, 77, 77);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-bottom-right-radius: 20px;
 }
 
 .wishlist {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
 }
 
-.wishlist button,
-.view-btn {
+.wishlist button {
   background: none;
   border: none;
   cursor: pointer;
   font-size: 14px;
-  margin-left: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+}
+
+.wishlist-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.view-btn {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.wishlist button,
+.view-btn {
+  background-color: #ff4c4c;
+ 
 }
 
 .product-info {
-  margin-top: 40px;
-  font-size: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 140px;
+  margin-bottom: 15px;
+  padding-left:  auto;
+  padding-right: auto;
+  max-width: 90%;
 }
 
 .tags span {
   background-color: rgb(230, 230, 230);
-  margin: 5px 0;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 12px;
-  display: inline-block;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
 }
+ 
+.tags span i {
+  color: #555; 
+  font-size: 14px;
+}
+
+ 
 
 .product-actions {
-  margin-top: 15px;
   display: flex;
-  justify-content: space-between;
-}
+  flex-direction: column;  
+  gap: 5px;  
+  background-color: #e1e2e1;
+  position: absolute;
+  top: 190px;
+  margin-top: 65px;
+  left: 0;
+  right: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 5px;
 
-.details-btn,
-.add-to-cart-btn {
-  background-color: rgb(0, 123, 255);
+}
+ 
+.details-btn,.add-to-cart-btn{
+  background-color: #a29f9f;
+  height: 25px;
+  width: 150px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
   color: white;
-  padding: 10px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  flex: 1;
-  margin: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.details-btn:hover,
-.add-to-cart-btn:hover {
-  background-color: rgb(0, 100, 200);
+.buttons{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
+ 
 
 .load-more {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 110px;
 }
 
 .load-more-btn {
@@ -103,7 +170,7 @@
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -111,106 +178,92 @@
   background-color: rgb(0, 100, 200);
 }
 
- 
+
+/***********************icon *************************/
+.bi {
+  font-size: 20px;
+}
+
+.bi-heart {
+  color: #ff6b6b;
+}
+
+.bi-eye {
+  color: #0d6efd;
+} 
+
 /*********************** RESPONSIVE CSS *************************/
+
  
 @media (min-width: 1024px) {
   .product-list {
-    grid-template-columns: repeat(4, 1fr);  
-  }
-}
-/* รองรับหน้าจอขนาดเล็กกว่า 768px */
-@media (max-width: 768px) {
-  .cardproductsale {
-    margin: 10px;
-    padding: 10px;
+    grid-template-columns: repeat(4, 1fr);
   }
 
+  .banproductsale {
+    font-size: 28px;
+  }
+
+  .tags span {
+    font-size: 14px;
+  }
+
+  .product-actions {
+    font-size: 14px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .cardproductsale {
+    margin: 10px auto;
+    padding: 10px;
+  }
+ 
   .product-list {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
   }
-
-  .product-item {
+  .product-item{
+    margin: 5px;
     padding: 10px;
-    border-radius: 8px;
   }
-
-  .discount-badge {
-    font-size: 12px;
-    padding: 3px 8px;
-  }
-
-  .wishlist button,
-  .view-btn {
-    font-size: 12px;
-  }
-
-  .product-info {
-    font-size: 14px;
-    margin-top: 30px;
-  }
+  
 
   .tags span {
     font-size: 10px;
-    padding: 3px 8px;
   }
 
   .details-btn,
   .add-to-cart-btn {
-    font-size: 12px;
     padding: 8px;
+    font-size: 12px;
   }
-
-  .load-more-btn {
-    font-size: 14px;
-    padding: 8px 15px;
+  .bi{
+    font-size: 18px;
   }
 }
 
-/***************************** รองรับหน้าจอขนาดเล็กกว่า 480px ******************/
+ 
 @media (max-width: 480px) {
   .product-list {
     grid-template-columns: 1fr;
-    gap: 8px;
   }
 
-  .cardproductsale {
-    margin: 5px;
-    padding: 8px;
-  }
-
-  .product-item {
-    padding: 8px;
-  }
-
-  .discount-badge {
-    font-size: 10px;
-    padding: 2px 6px;
-  }
-
-  .wishlist button,
-  .view-btn {
-    font-size: 10px;
-  }
-
-  .product-info {
-    font-size: 12px;
+  .product-item{
+    height: 200px;
   }
 
   .tags span {
-    font-size: 8px;
-    padding: 2px 6px;
+    font-size: 10px;
+    padding: 3px 6px;
   }
 
   .details-btn,
   .add-to-cart-btn {
-    font-size: 10px;
     padding: 6px;
+    font-size: 10px;
   }
-
-  .load-more-btn {
-    font-size: 12px;
-    padding: 6px 10px;
+  .bi {
+    font-size: 16px;
   }
 }
